@@ -92,7 +92,7 @@ premium_upgrade,6.99,USD,0.00,2021-12-13,P6M,P1M
 
 `token` The purchase token from the device.*
 
-***Note that Android receipts that expired more than 90 days ago can't be imported.** Additionally, only the current status can be retrieved from each Android token. This means that Android charts for historical data won't be accurate.
+***Note that [Android receipts that expired more than 60 days ago can't be imported](https://developer.android.com/google/play/billing/subscriptions#lifecycle).** Additionally, only the current status can be retrieved from each Android token. This means that Android charts for historical data won't be accurate.
 
 ### Stripe
 
