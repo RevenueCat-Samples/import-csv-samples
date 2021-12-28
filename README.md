@@ -12,9 +12,9 @@ To do a receipt import we'll need 3 csv files for iOS, Android and Stripe with t
 |-------------------------------|-----|---------|--------|
 | `app_user_id`                 | ✅   | ✅       | ✅      |
 | `receipt`/`token`             | ✅   | ✅       | ✅      |
-| `product_id`                  | 🚧 [Product price map file](https://github.com/RevenueCat-Samples/import-csv-samples/edit/sharif/add-introductory-price-duration/README.md#product-price-map-ios-only) required if product isn't included.   | ✅       |        |
-| `price`                       | 🚧 [Product price map file](https://github.com/RevenueCat-Samples/import-csv-samples/edit/sharif/add-introductory-price-duration/README.md#product-price-map-ios-only) file required if price isn't included.   |         |        |
-| `currency`                    | 🚧 [Product price map file](https://github.com/RevenueCat-Samples/import-csv-samples/edit/sharif/add-introductory-price-duration/README.md#product-price-map-ios-only) required if currency isn't included.   |         |        |
+| `product_id`                  | 🚧 [Product price map file](#product-price-map-ios-only) required if product isn't included.   | ✅       |        |
+| `price`                       | 🚧 [Product price map file](#product-price-map-ios-only) file required if price isn't included.   |         |        |
+| `currency`                    | 🚧 [Product price map file](#product-price-map-ios-only) required if currency isn't included.   |         |        |
 | `introductory_price`          | 🚧 Required if not a free trial.   |         |        |
 | `introductory_price_duration` | 🚧 Required if not a free trial.   |         |        |
 
@@ -26,13 +26,13 @@ To do a receipt import we'll need 3 csv files for iOS, Android and Stripe with t
 
 `receipt` The raw receipt file from the device.*
 
-`product_id` The last purchased product ID contained in the receipt. This is for pricing calculations - if you don't have the product ID, you need to provide a [product price map file](https://github.com/RevenueCat-Samples/import-csv-samples/edit/sharif/add-introductory-price-duration/README.md#product-price-map-ios-only).
+`product_id` The last purchased product ID contained in the receipt. This is for pricing calculations - if you don't have the product ID, you need to provide a [product price map file](#product-price-map-ios-only).
 
-`price` The price of the product. If you don't have prices for each receipt, you need to provide a [product price map file](https://github.com/RevenueCat-Samples/import-csv-samples/edit/sharif/add-introductory-price-duration/README.md#product-price-map-ios-only).
+`price` The price of the product. If you don't have prices for each receipt, you need to provide a [product price map file](#product-price-map-ios-only).
 
 `introductory_price` The introductory offer price. This column is required if you offer an introductory period that is not a free trial.
 
-`currency` The currency of the price. If you don't have both prices and currencies, you need to provide a [product price map file](https://github.com/RevenueCat-Samples/import-csv-samples/edit/sharif/add-introductory-price-duration/README.md#product-price-map-ios-only).
+`currency` The currency of the price. If you don't have both prices and currencies, you need to provide a [product price map file](#product-price-map-ios-only).
 
 > 🚧 If you don't have product IDs, prices or currencies with the receipts we can take a [separate file](#product-price-map-ios-only) with a mapping of product_id, price, currency as well. If there were any known price changes, those should also be included here.
 
