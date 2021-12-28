@@ -61,7 +61,7 @@ A product price map CSV has the following fields:
 
 `introductory_price` The introductory price of the product (required only if you offer an introductory price that is not a free trial.)
 
-`date` The date that the price was effective.
+`date` The date that the price was effective. The format is [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations).
 
 `duration` The duration of the product (`lifetime` for non-consumable and consumable products)
 
