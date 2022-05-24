@@ -14,7 +14,7 @@ To do a receipt import we'll need 3 csv files for iOS, Android and Stripe with t
 | `receipt`/`token`             | ✅   | ✅       | ✅      |
 | `product_id`                  | 🚧 [Product price map file](#product-price-map-ios-only) required if product isn't included.   | ✅       |        |
 | `price`                       | 🚧 [Product price map file](#product-price-map-ios-only) file required if price isn't included.   |         |        |
-| `currency`                    | 🚧 [Product price map file](#product-price-map-ios-only) required if currency isn't included.   |         |        |
+| `currency`                    | 🚧 [Product price map file](#product-price-map-ios-only) required if currency isn't included. If neither can be provided, it defaults to USD.   |         |        |
 | `introductory_price`          | 🚧 Required if not a free trial.   |         |        |
 | `introductory_price_duration` | 🚧 Required if not a free trial.   |         |        |
 
