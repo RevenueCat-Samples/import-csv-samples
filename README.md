@@ -57,6 +57,8 @@ A product price map CSV has the following fields:
 
 `price` The price of the product.
 
+`country` The [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code for the price's country. Only necessary if you use different price tiers in different countries.
+
 `currency` The currency of the price.
 
 `introductory_price` The introductory price of the product (required only if you offer an introductory price that is not a free trial.)
@@ -72,9 +74,10 @@ A product price map CSV has the following fields:
 The `date` field is the date that the price was effective on that product. For example, if a product, called `premium_upgrade`, was created on October 19, 2021 and the price was raised from 3.99 USD to 6.99 USD on December 13, 2021, the product price map would have two rows for the product:
 
 ```
-product_id,price,currency,introductory_price,date,duration,introductory_price_duration
-premium_upgrade,3.99,USD,0.00,2021-10-19,P6M,P1M
-premium_upgrade,6.99,USD,0.00,2021-12-13,P6M,P1M
+product_id,country,price,currency,introductory_price,date,duration,introductory_price_duration
+premium_upgrade,US,3.99,USD,0.00,2021-10-19,P6M,P1M
+premium_upgrade,US,6.99,USD,0.00,2021-12-13,P6M,P1M
+premium_upgrade,CA,9.99,CAD,0.00,2021-12-13,P6M,P1M
 ...
 ```
 
