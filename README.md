@@ -57,7 +57,7 @@ A product price map CSV has the following fields:
 
 `price` The price of the product.
 
-`country` The [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code for the price's country. Only necessary if you use different price tiers in different countries.
+`country` The [ISO 3166 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code for the price's country. Only necessary if you use different price tiers in different countries.
 
 `currency` The currency of the price.
 
