@@ -107,6 +107,19 @@ premium_upgrade,CA,9.99,CAD,0.00,2021-12-13,P6M,P1M
 
 ***Note that Stripe subscription objects contain only the current status of the subscription.** This means that Stripe charts for historical data won't be accurate.
 
+## Adding subscriber attributes to receipt import files
+
+You can include metadata with each receipt that you want to be attached to the customer as [subscriber attributes](https://www.revenuecat.com/docs/subscriber-attributes). Include each attribute as a column in the file and let RevenueCat know that they should be imported. For example, if you wanted to set the IDFA and email address along with the receipt, you can create a file that looks like this:
+
+```
+app_user_id,product_id,price,currency,introductory_price,receipt,email,idfa
+user_wk3E8aoK6a,premium_weekly,4.99,USD,0.99,MIIUJgYJ...,email1@example.com,ABCD-EFGH...
+user_mBV1R0eQFP,premium_weekly,8.99,CAD,1.99,MIIUKgYJ...,email2@example.com,ABCD-EFGH...
+user_OM0duSAUaZ,premium_weekly,4.99,USD,0.99,MIIUNwYJ...,email3@example.com,ABCD-EFGH...
+user_Z9LhfKTSil,premium_weekly,4.99,GBP,0.99,MIIUBQYJ...,email4@example.com,ABCD-EFGH...
+user_DySxlIA0tQ,premium_weekly,4.99,USD,0.99,MIIUHAYJ...,email5@example.com,ABCD-EFGH...
+```
+
 ## Receipt imports for apps without user authentication systems
 
 A bulk receipt import requires an app user ID to be provided for every receipt. If you don't have app user IDs because you don't use an authentication system, you have two options to migrate to RevenueCat:
