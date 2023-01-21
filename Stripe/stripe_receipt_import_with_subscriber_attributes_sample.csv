@@ -1,4 +1,4 @@
-app_user_id,$email,$name,tShirtSize,receipt
+app_user_id,$email,$ip,tShirtSize,receipt
 user_epRPiQExrh,email1@example.com,63.177.11.114,small,sub_X38EC7V4RGKT7U
 user_fOvAXRKy57,email2@example.com,121.42.194.132,medium,sub_CV25VWWXR07O2P
 user_1ChxVIVY8M,email3@example.com,236.252.146.66,large,sub_GVEN7BGCKFVZ4I
