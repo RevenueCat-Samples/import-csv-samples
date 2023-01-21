@@ -17,6 +17,9 @@
 const csvFilePath = 'receipts.csv'; // The relative path to your CSV file
 const apiKey = 'PUBLIC_API_KEY';    // Your public RevenueCat API key. More info: https://docs.revenuecat.com/docs/authentication#obtaining-api-keys
 const platform = 'platform';        // Can be `ios`, `android`, or `stripe`. Contact support@revenuecat.com to import Mac or Amazon tokens.
+const subscriberAttributes = [      // Add any columns that are subscriber attributes. For example: const subscriberAttributes = ['$email', 'membership']
+
+]
 ///////////////////////////////////////////////////////////////////////////////
 
 
@@ -63,7 +66,21 @@ async function main() {
       'price': record.price, // Required on iOS only
       'currency': record.currency, // Required on iOS only
       'introductory_price': record.introductory_price, // Required on iOS only if not a free trial
-      'intro_duration': record.introductory_price_duration // Required on iOS only if not a free trial
+      'intro_duration': record.introductory_price_duration, // Required on iOS only if not a free trial
+      'attributes': {}, // Optional
+    }
+
+    if (subscriberAttributes.length > 0) {
+      subscriberAttributes.forEach((attribute) => {
+        if (record[attribute] === null
+          || record[attribute] === ''
+          || record[attribute] === undefined)
+          return;
+        data.attributes[attribute] = {
+          'value': record[attribute],
+          'updated_at_ms': Date.now(),
+        }
+      });
     }
 
     const axiosConfig = {
