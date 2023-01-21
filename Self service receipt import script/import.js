@@ -9,11 +9,18 @@
 //   (5) Run `node ./import.js`.
 // Contact support@revenuecat.com or leave a comment below if you have any questions or feedback.
 
-// Constants - fill these out before running
-const csvFilePath = 'receipts.csv'; // The relative path to your CSV file
-const apiKey = 'PUBLIC_API_KEY';          // Your public RevenueCat API key. More info: https://docs.revenuecat.com/docs/authentication#obtaining-api-keys
-const platform = 'platform';                   // Can be `ios`, `android`, or `stripe`. Contact support@revenuecat.com to import Mac or Amazon tokens.
+
+
+
 ///////////////////////////////////////////////////////////////////////////////
+// ⚠️ Constants - fill these out before running ⚠️
+const csvFilePath = 'receipts.csv'; // The relative path to your CSV file
+const apiKey = 'PUBLIC_API_KEY';    // Your public RevenueCat API key. More info: https://docs.revenuecat.com/docs/authentication#obtaining-api-keys
+const platform = 'platform';        // Can be `ios`, `android`, or `stripe`. Contact support@revenuecat.com to import Mac or Amazon tokens.
+///////////////////////////////////////////////////////////////////////////////
+
+
+
 
 if (apiKey === 'PUBLIC_API_KEY') throw new Error(
   "ERROR: Enter your public API key on line 14. Find your API key here: https://www.revenuecat.com/docs/authentication"
