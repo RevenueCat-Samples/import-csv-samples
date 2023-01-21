@@ -26,12 +26,12 @@ const subscriberAttributes = [      // Add any columns that are subscriber attri
 
 
 if (apiKey === 'PUBLIC_API_KEY') throw new Error(
-  "ERROR: Enter your public API key on line 14. Find your API key here: https://www.revenuecat.com/docs/authentication"
+  "ERROR: Enter your public API key on line 18. Find your API key here: https://www.revenuecat.com/docs/authentication"
 )
 
 if (['ios', 'android', 'stripe'].includes(platform) === false) {
   throw new Error(
-    "ERROR: Enter the platform on line 15. It can be `ios`, `android`, or `stripe`."
+    "ERROR: Enter the platform on line 19. It can be `ios`, `android`, or `stripe`."
   )
 }
 
