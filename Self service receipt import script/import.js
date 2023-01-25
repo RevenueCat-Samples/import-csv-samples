@@ -9,11 +9,31 @@
 //   (5) Run `node ./import.js`.
 // Contact support@revenuecat.com or leave a comment below if you have any questions or feedback.
 
-// Constants - fill these out before running
-const csvFilePath = 'apple_receipts.csv'; // The relative path to your CSV file
-const apiKey = 'PUBLIC_API_KEY';          // Your public RevenueCat API key. More info: https://docs.revenuecat.com/docs/authentication#obtaining-api-keys
-const platform = 'ios';                   // Can be `ios`, `android`, or `stripe`. Contact support@revenuecat.com to import Mac or Amazon tokens.
+
+
+
 ///////////////////////////////////////////////////////////////////////////////
+// ⚠️ Constants - fill these out before running ⚠️
+const csvFilePath = 'receipts.csv'; // The relative path to your CSV file
+const apiKey = 'PUBLIC_API_KEY';    // Your public RevenueCat API key. More info: https://docs.revenuecat.com/docs/authentication#obtaining-api-keys
+const platform = 'platform';        // Can be `ios`, `android`, or `stripe`. Contact support@revenuecat.com to import Mac or Amazon tokens.
+const subscriberAttributes = [      // Add any columns that are subscriber attributes. For example: const subscriberAttributes = ['$email', 'membership']
+
+]
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+if (apiKey === 'PUBLIC_API_KEY') throw new Error(
+  "ERROR: Enter your public API key on line 18. Find your API key here: https://www.revenuecat.com/docs/authentication"
+)
+
+if (['ios', 'android', 'stripe'].includes(platform) === false) {
+  throw new Error(
+    "ERROR: Enter the platform on line 19. It can be `ios`, `android`, or `stripe`."
+  )
+}
 
 const csvParser = require('csv-parse');
 const fs = require('fs');
@@ -46,7 +66,21 @@ async function main() {
       'price': record.price, // Required on iOS only
       'currency': record.currency, // Required on iOS only
       'introductory_price': record.introductory_price, // Required on iOS only if not a free trial
-      'intro_duration': record.introductory_price_duration // Required on iOS only if not a free trial
+      'intro_duration': record.introductory_price_duration, // Required on iOS only if not a free trial
+      'attributes': {}, // Optional
+    }
+
+    if (subscriberAttributes.length > 0) {
+      subscriberAttributes.forEach((attribute) => {
+        if (record[attribute] === null
+          || record[attribute] === ''
+          || record[attribute] === undefined)
+          return;
+        data.attributes[attribute] = {
+          'value': record[attribute],
+          'updated_at_ms': Date.now(),
+        }
+      });
     }
 
     const axiosConfig = {
