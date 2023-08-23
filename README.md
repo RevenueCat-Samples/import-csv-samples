@@ -91,15 +91,15 @@ If you have price changes for multiple dates, each price change date should have
 The `date` is the date that the price was effective on that product. For example, if a product, called `premium_upgrade`, was created on October 19, 2021 and the price was raised from 3.99 USD to 6.99 USD on December 13, 2021, we should have two CSV files for that product:
 * premium_upgrade_2021-10-19.csv
 ```
-- price,currency,country,intro_price,intro_price_payment_mode
-- 3.99,USD,US,0,2
+price,currency,country,intro_price,intro_price_payment_mode
+3.99,USD,US,0,2
 ```
 
 * premium_upgrade_2021-12-13.csv
 ```
-- price,currency,country,intro_price,intro_price_payment_mode
-- 6.99,USD,US,0,2
-- 6.99,CAD,CA,0,2
+price,currency,country,intro_price,intro_price_payment_mode
+6.99,USD,US,0,2
+6.99,CAD,CA,0,2
 ...
 ```
 
