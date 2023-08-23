@@ -71,15 +71,33 @@ A product price map CSV has the following fields:
 
 ##### Price Changes (iOS Only)
 
-The `date` field is the date that the price was effective on that product. For example, if a product, called `premium_upgrade`, was created on October 19, 2021 and the price was raised from 3.99 USD to 6.99 USD on December 13, 2021, the product price map would have two rows for the product:
+> 💡 Check out the [sample file](iOS/ios_product_price_change_sample.csv) for a complete example of a product price change CSV file for iOS.
 
-```
-product_id,country,price,currency,introductory_price,date,duration,introductory_price_duration
-premium_upgrade,US,3.99,USD,0.00,2021-10-19,P6M,P1M
-premium_upgrade,US,6.99,USD,0.00,2021-12-13,P6M,P1M
-premium_upgrade,CA,9.99,CAD,0.00,2021-12-13,P6M,P1M
-...
-```
+##### When should you provide a product price map?
+
+You need to include a product price change CSV if one of the following is true, and you would like your prices to get updated:
+
+- You met the requisites for providing a product price map but did not provide one when importing receipts
+- You increased the price of a product in the past and have not provided App Store Connect API keys for that app
+
+A product price change CSV should be named following this convention:
+`<product_identifier>_<date_the_price_change_took_effect_in_YYYY-MM-DD>`.
+
+For example: `MYAWESOMESUBSCRIPTIONPRODUCT_2022-03-16`
+
+If you have price changes for multiple products, each product should have its own CSV file, with the product name and the price change date.
+
+A product price map CSV has the following fields:
+
+`price` The price of the product.
+
+`country` The [ISO 3166 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code for the price's country. Only necessary if you use different price tiers in different countries. You can provide a default price for a currency by creating an entry with the same currency and an empty country field.
+
+`currency` The currency of the price.
+
+`introductory_price` The introductory price of the product. Required only if there is an introductory price for the product.
+
+`introductory_price_payment_mode`: The introductory price payment mode of the product. Must be one between 0 (pay as you go), 1 (pay upfront), or 2 (free trial). Required only if there is an introductory price for the product.
 
 > 💡 At least one row for USD is required. If you don't provide a price for a specific currency, RevenueCat will always default to USD for purchases made in that currency.
 
