@@ -73,7 +73,7 @@ A product price map CSV has the following fields:
 
 > 💡 Check out the [sample file](iOS/ios_product_price_change_sample.csv) for a complete example of a product price change CSV file for iOS.
 
-##### When should you provide a product price map?
+##### When should you provide a product price change?
 
 You need to include a product price change CSV if one of the following is true, and you would like your prices to get updated:
 
@@ -86,6 +86,22 @@ A product price change CSV should be named following this convention:
 For example: `MYAWESOMESUBSCRIPTIONPRODUCT_2022-03-16`
 
 If you have price changes for multiple products, each product should have its own CSV file, with the product name and the price change date.
+If you have price changes for multiple dates, each price change date should have its own CSV file, , with the product name and the price change date.
+
+The `date` is the date that the price was effective on that product. For example, if a product, called `premium_upgrade`, was created on October 19, 2021 and the price was raised from 3.99 USD to 6.99 USD on December 13, 2021, we should have two CSV files for that product:
+* premium_upgrade_2021-10-19.csv
+```
+- price,currency,country,intro_price,intro_price_payment_mode
+- 3.99,USD,US,0,2
+```
+
+* premium_upgrade_2021-12-13.csv
+```
+- price,currency,country,intro_price,intro_price_payment_mode
+- 6.99,USD,US,0,2
+- 6.99,CAD,CA,0,2
+...
+```
 
 A product price map CSV has the following fields:
 
