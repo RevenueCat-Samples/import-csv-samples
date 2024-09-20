@@ -15,7 +15,7 @@ This script is automated and performs changes to the data in RevenueCat that may
   4. Run `npm install csv axios`.
   5. Run `node ./import.js`.
 
-Contact support@revenuecat.com or leave a comment below if you have any questions or feedback.
+Contact support@revenuecat.com if you have any questions or feedback.
 
 ## Learn More
   1. [RevenueCat API Reference](https://docs.revenuecat.com/reference/basic)
