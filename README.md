@@ -32,7 +32,7 @@ To do a receipt import we'll need 3 csv files for iOS, Android and Stripe with t
 
 `token` The purchase token from the device.*
 
-***Note that [Android receipts that expired more than 60 days ago can't be imported](https://developer.android.com/google/play/billing/subscriptions#lifecycle).** Additionally, only the current status can be retrieved from each Android token. We are able to import history using Google's financial reports up to 2023. Please follow [this guide](https://www.revenuecat.com/docs/migrating-to-revenuecat/migrating-existing-subscriptions/google-historical-import) to set this up and notify support@revenuecat.com or your account manager that you would like us to import historical data.
+***Note that [Android receipts that expired more than 60 days ago can't be imported](https://developer.android.com/google/play/billing/subscriptions#lifecycle).** Additionally, only the current status can be retrieved from each Android token. We are able to import history using Google's financial reports up to July 2023. Please follow [this guide](https://www.revenuecat.com/docs/migrating-to-revenuecat/migrating-existing-subscriptions/google-historical-import) to set this up and notify support@revenuecat.com or your account manager that you would like us to import historical data.
 
 ### Stripe
 
