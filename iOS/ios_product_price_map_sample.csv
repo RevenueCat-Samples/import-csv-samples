@@ -1,4 +1,0 @@
-product_id,country,price,currency,introductory_price,date,duration,introductory_price_duration
-premium_weekly,US,4.99,USD,0.99,2021-09-13,P1W,P2M
-premium_weekly,PA,3.99,USD,0.99,2021-01-01,P1W,P2M
-premium_weekly,CA,8.99,CAD,1.99,2021-01-01,P1W,P2M
