@@ -20,7 +20,9 @@ To do a receipt import we'll need 3 csv files for iOS, Android and Stripe with t
 
 `app_user_id` The user identifier to associate with the receipt.
 
-`receipt` The raw receipt file from the device, the receipt from S2S notifications, or the transaction identifier. Choosing any of these is ok, but make sure that you don't mix identifiers in a single file. For example, if you have transaction identifiers for some users and receipts for others, put them in separate files.
+`receipt` The raw receipt file from the device, the receipt from S2S notifications.
+
+> 💡 If you have only transaction identifiers, please contact support@revenuecat.com for help importing them into RevenueCat.
 
 ### Android
 
