@@ -2,6 +2,8 @@
 
 For large datasets that aren't practical to import through the REST API, you can send us a `.csv` file to import manually. This repository contains sample `csv` files that we can import. [Email us](mailto:support@revenuecat.com) with the below information and we'll be in touch.
 
+> 💡 Don't have a lot of data to import? Try the [self-service script](https://github.com/RevenueCat-Samples/import-csv-samples/tree/dcb99c71e9487de6b46fbfa1fb11766fd99322c5/Self%20service%20receipt%20import%20script)!
+
 > NOTE: Bulk imports DO NOT trigger webhooks or integrations. Bulk imports done by RevenueCat will not trigger any webhook or integration events. If this is a requirement, then you'll need to perform an import using the REST API as mentioned in the [RevenueCat Migration Docs](https://docs.revenuecat.com/docs/migrating-existing-subscriptions#using-the-rest-api). 
 
 ## Receipt Import CSV File Format
