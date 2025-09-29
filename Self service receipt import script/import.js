@@ -62,12 +62,15 @@ async function main() {
     let data = {
       'app_user_id': record.app_user_id,
       'fetch_token': record.token,
-      'product_id': record.product_id, // Required on Android and iOS only
-      'price': record.price, // Required on iOS only
-      'currency': record.currency, // Required on iOS only
-      'introductory_price': record.introductory_price, // Required on iOS only if not a free trial
-      'intro_duration': record.introductory_price_duration, // Required on iOS only if not a free trial
       'attributes': {}, // Optional
+    }
+
+    if (platform === 'android') {
+      if (record.product_id === null) {
+        console.error(`Product ID missing from line ${lineNumber}, skipping`);
+        continue;
+      }
+      data['product_id'] = record.product_id  // Required on Android only
     }
 
     if (subscriberAttributes.length > 0) {
