@@ -2,11 +2,12 @@
 // License: MIT
 
 // Usage:
-//   (1) IMPORTANT: Read the guide to learn more about creating CSV files that can be processed by this script: https://github.com/RevenueCat-Samples/import-csv-samples#readme
-//   (2) Download this file.
-//   (3) Fill out the constants below with the required information.
-//   (4) Run `npm install csv axios`.
-//   (5) Run `node ./import.js`.
+//  1. **IMPORTANT: Read the guide to learn more about creating CSV files that can be processed by this script: https://github.com/RevenueCat-Samples/import-csv-samples#readme**
+//  2. Split your imports so that you have one store and app per file, then run the script for each file.
+//  3. Download the `import.js` file.
+//  4. Fill out the constants at the top of the file with the required information.
+//  5. Run `npm install csv axios`.
+//  6. Run `node ./import.js`.
 // Contact support@revenuecat.com or leave a comment below if you have any questions or feedback.
 
 
