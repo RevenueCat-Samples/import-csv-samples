@@ -13,7 +13,7 @@ To do a receipt import we'll need 3 csv files for iOS, Android and Stripe with t
 | Column Name                   | iOS | Android | Stripe |
 |-------------------------------|-----|---------|--------|
 | `app_user_id`                 | ✅   | ✅       | ✅      |
-| `receipt`/`token`             | ✅ (receipt object or transaction IDs)   | ✅       | ✅      |
+| `receipt`/`token`             | ✅   | ✅       | ✅      |
 | `product_id`                  |      | ✅       |         |
 
 ### iOS
