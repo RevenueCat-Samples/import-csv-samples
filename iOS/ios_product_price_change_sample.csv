@@ -1,6 +1,0 @@
-price,currency,country,intro_price,intro_price_payment_mode
-19.99,USD,US,9.99,0
-25.99,UY,UY,12.99,0
-19.99,USD,,9.99,0
-19.99,EUR,,0,2
-19.99,EUR,FR,,
